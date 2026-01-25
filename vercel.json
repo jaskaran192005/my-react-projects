@@ -1,8 +1,9 @@
 {
   "routes": [
-    { "src": "/fsd1/(.*)", "dest": "/public/fsd1/$1" },
-    { "src": "/fsd2/(.*)", "dest": "/public/fsd2/$1" },
-    { "src": "/fsd3/(.*)", "dest": "/public/fsd3/$1" },
-    { "src": "/fsd4/(.*)", "dest": "/public/fsd4/$1" }
+    { "src": "^/$", "dest": "/FSD-1/index.html" },
+    { "src": "^/fsd1/?$", "dest": "/FSD-1/index.html" },
+    { "src": "^/fsd2/?$", "dest": "/FSD-2/index.html" },
+    { "src": "^/fsd3/?$", "dest": "/FSD-3/index.html" },
+    { "src": "^/fsd4/?$", "dest": "/FSD-4/index.html" }
   ]
 }
