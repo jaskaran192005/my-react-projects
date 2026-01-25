@@ -11,7 +11,7 @@
       "config": { "distDir": "dist" }
     },
     {
-      "src": "FSD-3/package.json",
+      "src": "FSD-3/theme_toggle_spa/package.json",
       "use": "@vercel/static-build",
       "config": { "distDir": "dist" }
     },
@@ -22,9 +22,10 @@
     }
   ],
   "routes": [
-    { "src": "/fsd-1/(.*)", "dest": "/FSD-1/dist/$1" },
-    { "src": "/fsd-2/(.*)", "dest": "/FSD-2/dist/$1" },
-    { "src": "/fsd-3/(.*)", "dest": "/FSD-3/dist/$1" },
-    { "src": "/fsd-4/(.*)", "dest": "/FSD-4/dist/$1" }
+    { "src": "/fsd-1/(.*)", "dest": "/FSD-1/$1" },
+    { "src": "/fsd-2/(.*)", "dest": "/FSD-2/$1" },
+    { "src": "/fsd-3/(.*)", "dest": "/FSD-3/theme_toggle_spa/$1" },
+    { "src": "/fsd-4/(.*)", "dest": "/FSD-4/$1" },
+    { "src": "/", "dest": "/FSD-1/index.html" }
   ]
 }
