@@ -1,9 +1,30 @@
 {
+  "builds": [
+    {
+      "src": "FSD-1/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
+    },
+    {
+      "src": "FSD-2/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
+    },
+    {
+      "src": "FSD-3/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
+    },
+    {
+      "src": "FSD-4/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
+    }
+  ],
   "routes": [
-    { "src": "^/$", "dest": "/FSD-1/index.html" },
-    { "src": "^/fsd1/?$", "dest": "/FSD-1/index.html" },
-    { "src": "^/fsd2/?$", "dest": "/FSD-2/index.html" },
-    { "src": "^/fsd3/?$", "dest": "/FSD-3/index.html" },
-    { "src": "^/fsd4/?$", "dest": "/FSD-4/index.html" }
+    { "src": "/fsd-1/(.*)", "dest": "/FSD-1/dist/$1" },
+    { "src": "/fsd-2/(.*)", "dest": "/FSD-2/dist/$1" },
+    { "src": "/fsd-3/(.*)", "dest": "/FSD-3/dist/$1" },
+    { "src": "/fsd-4/(.*)", "dest": "/FSD-4/dist/$1" }
   ]
 }
